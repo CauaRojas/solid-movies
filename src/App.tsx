@@ -1,4 +1,5 @@
-import { isDarkMode, setDarkMode } from './utils/dark-mode'
+import Header from './components/Header'
+import { isDarkMode } from './utils/dark-mode'
 
 function App() {
     return (
@@ -7,15 +8,8 @@ function App() {
             // prettier-ignore
             classList={{ "dark": isDarkMode() }}
         >
+            <Header />
             <h1 class="dark:text-white text-4xl">Hello World!</h1>
-            <button
-                class="dark:text-white"
-                onclick={() => {
-                    setDarkMode(!isDarkMode())
-                }}
-            >
-                AAAAA
-            </button>
         </main>
     )
 }
